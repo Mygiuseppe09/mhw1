@@ -1,0 +1,213 @@
+html { font-size: 12px;} /* userò il "rem" */
+
+body {
+    font-family: Arial, serif;
+    margin: 0;
+}
+
+p { margin: 0;}
+
+/* Definisco il carattere, il colore e la dimensione del testo in ciascuna delle sezioni
+della pagina  */
+
+.nav_text_style {
+    font-family: 'Andika', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+}
+
+.big_text_style {
+    font-family: 'David Libre', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.content_text_style {
+    font-family: 'Harmattan', sans-serif;
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: black;
+    line-height: 1.5;
+}
+
+.sub_content_text_style {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: black;
+    line-height: 1.5;
+}
+
+.footer_text_style {
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+}
+
+.names_text_style {
+    font-family: 'Courgette', cursive;
+    font-size: 2.5rem;
+}
+
+/* per gli "span evidenziatori" */
+.highlight {
+    display: inline-block;
+    background-color: yellow;
+    line-height: 1;
+}
+
+/* ***************************************************************************************** */
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    font-weight: bold;
+    background-color: darkcyan;
+    color: white;
+    padding: 10px;
+    border-radius: 35px;
+    text-decoration: none;
+}
+
+header {
+    background-image: url(header_background.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    position: relative; /* in modo da giocare con l'absolute di cio che sta dentro */
+    border: 5px solid black;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* poichè lo sfondo sarà con sfumatura scura */
+header .big_text_style {
+    color: white;
+    z-index: 1;
+}
+
+#realized_by {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+
+#realized_by p.names_text_style { margin-bottom: 10px; }
+
+#profile_photo {
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    border: 5px solid darkcyan;
+    background-image: url(me.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    border-radius: 100%;
+}
+
+#contents {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.content_item {
+    margin: 30px 0;
+    padding: 0 30px;
+}
+
+.sub_content_item { margin: 30px 0; }
+
+.image_container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+}
+
+@media (max-width: 500px) {
+    .image_container {
+        height: 200px;
+    }
+}
+
+#frutta_secca_photo { background-image: url(frutta_secca.jpg); }
+#cioccolato_photo { background-image: url(cioccolato.jpg); }
+#uova_photo { background-image: url(uova.jpg); }
+#spinaci_photo { background-image: url(spinaci.webp) }
+#pesce_photo { background-image: url(PESCE.jpg) }
+
+
+footer {
+    padding: 10px 5px;
+    background-color: #004646;
+}
+
+/* ||  ABOUT ME  ||  CATEGORIES  */
+#footer_flex_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#copyright {
+    text-align: center;
+    height: 50px;
+}
+
+/* in questo caso disponiamo verticalmente i contenuti del footer e aumentiamone la dimensione */
+@media (max-width: 500px) {
+
+    #footer_flex_container {
+        display: block;
+    }
+
+    .footer_text_style {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Giuseppe Leocata 1000001729 */
+
+
+
+
+
+
+
+
+
+
+
+
+
